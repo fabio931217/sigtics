@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>External and internal panels</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Opcional -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<!-- js -->
+<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="themes/sigtics.css">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$( document ).on( "pagecreate", function() {
+			$( "body > [data-role='panel']" ).panel();
+			$( "body > [data-role='panel'] [data-role='listview']" ).listview();
+		});
+		$( document ).one( "pageshow", function() {
+			$( "body > [data-role='header']" ).toolbar();
+			$( "body > [data-role='header'] [data-role='navbar']" ).navbar();
+		});
+	</script>
+
+	<style type="text/css">
+
+h1,a
+{
+	color: #fff;
+	text-shadow:none;
+	
+
+}
+
+#navegacion,#inside-a,#outside,.lista
+{
+	background-color: #606c88; 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+ background-image: -webkit-linear-gradient(top, #606c88, #3f4c6b);
+ background-image: -moz-linear-gradient(top, #606c88, #3f4c6b);
+ background-image: -ms-linear-gradient(top, #606c88, #3f4c6b);
+ background-image: -o-linear-gradient(top, #606c88, #3f4c6b);
+ background-image: linear-gradient(to bottom, #606c88, #3f4c6b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#606c88, endColorstr=#3f4c6b);
+}
+.lista li a
+{
+	font-weight: normal;
+	font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+
+	<div data-role="header" data-position="fixed" data-theme="b" id="navegacion">
+		<h1>SIGTICS</h1>
+
+		<a href="#outside" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#inside-a" data-icon="user" data-iconpos="notext">Buscar</a>
+		
+	</div><!-- /header -->
+
+	<div data-role="page" id="a">
+
+		<div role="main" class="ui-content">
+
+
+
+<ul data-role="listview" data-inset="true" data-theme="a">
+
+   <li data-role="list-divider">Viernes, Noviembre 8, 2015 <span class="ui-li-count">2</span></li>
+
+<li><a href="index.html">
+    <h2>Noticia</h2>
+    <p><strong>Resumen</strong></p>
+    <p>Pequeña introduccion.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+    </a>
+</li>
+
+<li><a href="index.html">
+    <h2>Noticia</h2>
+    <p><strong>Resumen</strong></p>
+    <p>Pequeña introduccion.</p>
+        <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+    </a>
+</li>
+
+    <li data-role="list-divider">Jueves, Noviembre 7, 2015 <span class="ui-li-count">1</span></li>
+  <li>
+    
+    <a href="index.html">
+   <h2>Noticia</h2>
+    <p><strong>Resumen</strong></p>
+    <p>Pequeña introduccion.</p>
+        <p class="ui-li-aside"><strong>1:24</strong>PM</p>
+    </a>
+</li>
+
+</ul>
+
+		</div><!-- /content -->
+
+	</div><!-- /page -->
+
+
+
+
+	<div data-role="panel" id="inside-a" data-position="right" data-display="overlay" data-theme="c" >
+			<ul data-role="listview" class="lista">
+				<li data-icon="back"><a href="#" data-rel="close" style="font-weight:normal;">Cerrar</a></li>
+				<li data-icon="user"><a href="documento.html"> Datos Personales </a></li>
+				<li data-icon="mail"><a  href="correo.html"> Correo </a></li>
+				<li data-icon="phone"><a href="telefono.html"> Telefono </a></li>
+				<li data-icon="lock"><a href="clave.html"> Contraseña </a></li>
+				
+			</ul>
+		</div>
+
+	<div data-role="panel" id="outside" data-theme="c" >
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar..."  class="lista" >
+			<li data-icon="back"><a href="#" data-rel="close" >Cerrar</a></li>
+			<li data-icon="home"> <a href="index.html"> Inicio  </a>
+			<li data-icon="info"> <a href="nosotros.html"> Nosotros  </a>
+			<li data-icon="eye"> <a href="vision.html"> Vision  </a>
+			<li data-icon="heart"> <a href="mision.html"> Mision  </a>
+			<li data-icon="mail"> <a href="contactenos.html"> Contactenos  </a>
+			<li data-icon="user"> <a href="#inside-a">  Mi Perfil  </a></li>
+			<li data-icon="action"> <a href="#inside-a">  Salir  </a></li>
+			
+			</li>
+			
+		</ul>
+
+		<img src="img/logo2.png" style="width:90%;margin-top:30px">
+	</div>
+
+
+</body>
+</html>
